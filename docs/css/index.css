@@ -4,6 +4,7 @@ main {
     height: 100vh;
     height: 100svh; /* interacts better with mobile browser interface */
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 
