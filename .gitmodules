@@ -1,0 +1,3 @@
+[submodule "docs/calendar"]
+	path = docs/calendar
+	url = https://github.com/itsschwer/printable-calendar
