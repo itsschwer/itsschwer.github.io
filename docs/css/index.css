@@ -2,6 +2,7 @@ body { margin: 0; }
 
 main {
     height: 100vh;
+    height: 100svh; /* interacts better with mobile browser interface */
     display: flex;
     justify-content: center;
     align-items: center;
