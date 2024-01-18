@@ -1,0 +1,17 @@
+.nav-c {
+    position: fixed;
+    margin: 0.5rem;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.25rem;
+}
+.nav-c > a > img { display: block }
+
+@media (prefers-color-scheme: light) {
+    .avatar {
+        background-color: #0D1117;
+        border-radius: 50%;
+    }
+}
