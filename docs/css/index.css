@@ -6,13 +6,13 @@ main {
 
     display: grid;
     grid-template-columns:
-        [l1] 1fr
-        [mid] auto
-        [r1] 1fr;
+        1fr
+        [mid] fit-content(50%)
+        1fr;
     grid-template-rows:
-        [t1] 1fr
-        [mid] auto
-        [b1] 1fr;
+        1fr
+        [mid] min-content
+        1fr;
 
     justify-items: center;
     align-items: center;
