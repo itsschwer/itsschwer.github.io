@@ -40,8 +40,20 @@ nav > a > img { display: block }
 
 h1 {
     all: unset; /* Ignore browser styles */
+    display: block;
     font-size: 2rem;
-    font-weight: unset;
+}
+
+h2 {
+    all: unset;
+    display: block;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+ul {
+    margin-block: unset;
+    padding-inline-start: 30px;
 }
 
 .grid-mid {
@@ -52,4 +64,9 @@ h1 {
 .grid-mid > * {
     display: block;
     text-align: center;
+}
+
+.align-right {
+    justify-self: flex-start;
+    margin-inline: 20%;
 }
