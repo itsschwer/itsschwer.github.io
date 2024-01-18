@@ -12,12 +12,6 @@
 .nav-c > a > svg
     { display: block; }
 
-.nav-c svg { fill: none; }
-@media (prefers-color-scheme: light) {
-    .nav-c svg { fill: #0D1117; }
-}
-
-
 /* hover effect inspired by
  * https://www.buildinamsterdam.com/cases
  * (as shown in Hyperplexed's
@@ -28,21 +22,22 @@
     position: relative;
     border-radius: 50%;
 }
-.nav-c a.home * {
-    pointer-events: none;
-}
-.nav-c a.home > svg {
-    position: absolute;
-    z-index: -1;
+.nav-c a.home * { pointer-events: none; }
+
+@media (prefers-color-scheme: light) {
+    .nav-c a.home { background-color: #0D1117; }
+    .nav-c a.home > svg text { fill: black; }
 }
 @media (prefers-color-scheme: dark) {
     .nav-c a.home > svg text { fill: white; }
 }
 
 .nav-c a.home > svg {
+    position: absolute;
+    z-index: -1;
+
     font-size: 1.5rem;
     rotate: 90deg;
-
     transition: rotate 300ms ease-out
 }
 .nav-c a.home > svg text {
