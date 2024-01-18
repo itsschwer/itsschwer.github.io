@@ -31,19 +31,31 @@
 .nav-c a.home * {
     pointer-events: none;
 }
-
 .nav-c a.home > svg {
     position: absolute;
     z-index: -1;
 }
-
-.nav-c a.home > svg text { font-size: 1.5rem; }
 @media (prefers-color-scheme: dark) {
     .nav-c a.home > svg text { fill: white; }
 }
 
-.nav-c a.home:hover,
-.nav-c a.home:focus-visible {
-    outline: 1px  solid blueviolet;
-    outline-offset: -6px;
+.nav-c a.home > svg {
+    font-size: 1.5rem;
+    rotate: 90deg;
+
+    transition: rotate 300ms ease-out
+}
+.nav-c a.home > svg text {
+    opacity: 0;
+    transition: opacity 200ms linear;
+}
+
+.nav-c a.home:hover svg,
+.nav-c a.home:focus-visible svg {
+    rotate: 0deg;
+}
+.nav-c a.home:hover > svg text,
+.nav-c a.home:focus-visible svg text {
+    opacity: 1;
+    transition-delay: 100ms;
 }
