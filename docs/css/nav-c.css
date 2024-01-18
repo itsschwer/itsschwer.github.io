@@ -7,11 +7,43 @@
     align-items: flex-end;
     gap: 0.25rem;
 }
-.nav-c > a > img { display: block }
 
+.nav-c > a > img,
+.nav-c > a > svg
+    { display: block; }
+
+.nav-c svg { fill: none; }
 @media (prefers-color-scheme: light) {
-    .avatar {
-        background-color: #0D1117;
-        border-radius: 50%;
-    }
+    .nav-c svg { fill: #0D1117; }
+}
+
+
+/* hover effect inspired by
+ * https://www.buildinamsterdam.com/cases
+ * (as shown in Hyperplexed's
+ * "These Pesky Web Designers Have Done It Again..."
+ * https://www.youtube.com/watch?v=GSPUUN4nDGE)
+ */
+.nav-c a.home {
+    position: relative;
+    border-radius: 50%;
+}
+.nav-c a.home * {
+    pointer-events: none;
+}
+
+.nav-c a.home > svg {
+    position: absolute;
+    z-index: -1;
+}
+
+.nav-c a.home > svg text { font-size: 1.5rem; }
+@media (prefers-color-scheme: dark) {
+    .nav-c a.home > svg text { fill: white; }
+}
+
+.nav-c a.home:hover,
+.nav-c a.home:focus-visible {
+    outline: 1px  solid blueviolet;
+    outline-offset: -6px;
 }
