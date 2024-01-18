@@ -70,3 +70,17 @@ ul {
     justify-self: flex-start;
     margin-inline: 20%;
 }
+
+
+
+
+/* Mobile breakpoint */
+@media only screen and (max-width: 600px) {
+    main {
+        /* Collapse columns, probably
+         * will cause overlap if a row
+         * has multiple populated cells
+         */
+        grid-template-columns: [mid] 1fr;
+    }
+}
