@@ -3,7 +3,8 @@ minima:
   skin: auto
 # https://stackoverflow.com/questions/68518590/does-minima-dark-skin-work-on-github-pages/70721593#70721593
 # https://github.com/jekyll/minima/issues/656
-remote_theme: jekyll/minima@10124515953527c8990a2de99ae4ddb2a81ffee3
+# remote_theme: jekyll/minima@10124515953527c8990a2de99ae4ddb2a81ffee3
+# ^ commented out ∵ v3 makes style changes that I do not prefer
 
 defaults:
   -
