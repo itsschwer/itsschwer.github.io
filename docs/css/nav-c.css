@@ -29,7 +29,7 @@
 }
 .nav-c a.home * { pointer-events: none; }
 .nav-c a.home img {
-    width: 4rem;
+    height: 4rem; /* Use height to avoid layout shifting (flex column) */
 }
 
 @media (prefers-color-scheme: dark) {
