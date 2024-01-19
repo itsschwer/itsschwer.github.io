@@ -20,29 +20,22 @@
  */
 .nav-c a.home {
     --bg: #0D1117;
-    --black: black;
-    --white: white;
-    --fill: var(--black);
+    --fill: black;
 
     position: relative;
     border-radius: 50%;
+    background-color: var(--bg);
 }
 .nav-c a.home * { pointer-events: none; }
 .nav-c a.home img {
     width: 4rem;
 }
 
-@media (prefers-color-scheme: light) {
-    .nav-c a.home { background-color: var(--bg); }
-    .nav-c a.home > svg text { fill: var(--fill); }
-}
 @media (prefers-color-scheme: dark) {
-    .nav-c a.home { --fill: var(--white); }
-    .nav-c a.home > svg text { fill: var(--fill); }
-}
-.nav-c a.home.force-light {
-    background-color: var(--bg);
-    --fill: var(--black);
+    .nav-c a.home:not(.only-light) {
+        --bg: unset;
+        --fill: white;
+    }
 }
 
 .nav-c a.home > svg {
@@ -54,6 +47,7 @@
     transition: rotate 300ms ease-out
 }
 .nav-c a.home > svg text {
+    fill: var(--fill);
     opacity: 0;
     transition: opacity 200ms linear;
 }
