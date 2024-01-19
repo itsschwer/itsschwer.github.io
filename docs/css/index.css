@@ -22,24 +22,6 @@ main.index {
     align-items: center;
 }
 
-h1 {
-    all: unset; /* Ignore browser styles */
-    display: block;
-    font-size: 2rem;
-}
-
-h2 {
-    all: unset;
-    display: block;
-    font-size: 1.5rem;
-    font-weight: bold;
-}
-
-ul {
-    margin-block: unset;
-    padding-inline-start: 30px;
-}
-
 .grid-mid {
     grid-column-start: mid;
     grid-row-start: mid;
@@ -62,8 +44,6 @@ ul {
     justify-self: flex-start;
     margin-inline: 20%;
 }
-
-
 
 
 /* Mobile breakpoint */
@@ -91,4 +71,23 @@ ul {
     .collapsible .align-inline-start {
         margin-inline: unset;
     }
+}
+
+
+/* Styling -------------------------- */
+
+h1, h2 { margin-block: unset; }
+h1 { font-size: 2rem; font-weight: unset; }
+h2 { font-size: 1.5rem; }
+
+ul {
+    margin-block: unset;
+    padding-inline-start: 30px;
+}
+
+
+/* Mobile breakpoint */
+@media only screen and (max-width: 600px) {
+    h2 { font-size: 1.25rem; }
+    ul { margin-block: 0.5rem; }
 }
