@@ -19,17 +19,30 @@
  * https://www.youtube.com/watch?v=GSPUUN4nDGE)
  */
 .nav-c a.home {
+    --bg: #0D1117;
+    --black: black;
+    --white: white;
+    --fill: var(--black);
+
     position: relative;
     border-radius: 50%;
 }
 .nav-c a.home * { pointer-events: none; }
+.nav-c a.home img {
+    width: 4rem;
+}
 
 @media (prefers-color-scheme: light) {
-    .nav-c a.home { background-color: #0D1117; }
-    .nav-c a.home > svg text { fill: black; }
+    .nav-c a.home { background-color: var(--bg); }
+    .nav-c a.home > svg text { fill: var(--fill); }
 }
 @media (prefers-color-scheme: dark) {
-    .nav-c a.home > svg text { fill: white; }
+    .nav-c a.home { --fill: var(--white); }
+    .nav-c a.home > svg text { fill: var(--fill); }
+}
+.nav-c a.home.force-light {
+    background-color: var(--bg);
+    --fill: var(--black);
 }
 
 .nav-c a.home > svg {

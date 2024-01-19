@@ -5,9 +5,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="color-scheme" content="dark light">
+    <meta name="color-scheme" content="only light">
 
     <link rel="icon" type="image/png" href="https://avatars.githubusercontent.com/u/42115696?v=4">
+    <link rel="stylesheet" href="/css/nav-c.css">
 
     <!-- https://jekyll.github.io/github-metadata/site.github/ -->
     <!-- https://github.com/jekyll/minima/blob/38a84a949f9753c4542e25f422935f59b4913053/_includes/head.html -->
@@ -19,9 +20,22 @@
 </head>
 
 <body>
+    <nav class="nav-c">
+        <a href="/" class="home force-light">
+            <img alt="home" src="https://avatars.githubusercontent.com/u/42115696?v=4">
+            <svg viewBox="0 0 160 160" style="inset: -30%">
+                <path id="path-circle" d="M80 24 a 56 56 0 1 1 -56 56 56 56 0 0 1 56 -56 Z" fill="none"></path>
+                <text><textPath xlink:href="#path-circle" startOffset="220">
+                    go home?
+                </textPath></text>
+            </svg>
+        </a>
+    </nav>
+
     <main class="container-lg px-3 my-5 markdown-body">
         {{ content }}
     </main>
+
     <!-- normally inserted by GitHub layouts? | https://www.bryanbraun.com/anchorjs/ -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js" integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg=" crossorigin="anonymous"></script>
     <script>anchors.add();</script>
