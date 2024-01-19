@@ -1,6 +1,7 @@
 .nav-c {
     position: fixed;
     margin: 0.5rem;
+    top: 0;
     right: 0;
     display: flex;
     flex-direction: column;
@@ -47,6 +48,7 @@
     transition: rotate 300ms ease-out
 }
 .nav-c a.home > svg text {
+    font-family: 'Times New Roman', Times, serif;
     fill: var(--fill);
     opacity: 0;
     transition: opacity 200ms linear;
