@@ -1,10 +1,11 @@
 body { margin: 0; }
 
-main {
+main.index {
     min-height: 100vh;
     min-height: 100svh; /* interacts better with mobile browser interface */
 
-    display: grid;
+    font-family: monospace;
+
     grid-template-columns:
         1fr
         [mid] fit-content(50%)
@@ -13,11 +14,12 @@ main {
         1fr
         [mid] min-content
         1fr;
+}
 
+.grid {
+    display: grid;
     justify-items: center;
     align-items: center;
-
-    font-family: monospace;
 }
 
 h1 {
@@ -42,13 +44,21 @@ ul {
     grid-column-start: mid;
     grid-row-start: mid;
 }
-
-.grid-mid > * {
-    display: block;
-    text-align: center;
+.grid-mid-sub {
+    grid-column-start: mid;
+    grid-row-start: -2;
+    align-self: flex-start;
 }
 
-.align-right {
+.grid-col {
+    width: 100%;
+    height: 100%;
+    grid-row: 1 / -1;
+}
+
+.grid-right { grid-column-start: -2; }
+
+.align-inline-start {
     justify-self: flex-start;
     margin-inline: 20%;
 }
@@ -58,7 +68,7 @@ ul {
 
 /* Mobile breakpoint */
 @media only screen and (max-width: 600px) {
-    main {
+    .grid.collapsible {
         /* Collapse columns, probably
          * will cause overlap if a row
          * has multiple populated cells
