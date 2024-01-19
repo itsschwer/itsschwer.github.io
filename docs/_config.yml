@@ -10,4 +10,4 @@ defaults:
     scope:
       path: "" # empty string = all files in project
     values:
-      layout: "base"
+      layout: "md"
