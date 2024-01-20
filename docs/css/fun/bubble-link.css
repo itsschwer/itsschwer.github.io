@@ -2,6 +2,8 @@
     position: relative;
     text-decoration-color: transparent;
     transition: text-decoration-color 0.15s;
+    /* Pseudo-element positioning only correct w/o line breaks */
+    white-space: nowrap;
 }
 .bubble-link::before {
     content: '';
@@ -9,8 +11,8 @@
     position: absolute;
     top: 0;
     bottom: 0;
-    left: -0.2rem;
-    right: -0.2rem;
+    left: -0.2em;
+    right: -0.2em;
     border-radius: 5px;
     background-color: currentColor;
 
