@@ -1,0 +1,35 @@
+.bubble-link {
+    position: relative;
+    text-decoration-color: transparent;
+    transition: text-decoration-color 0.15s;
+}
+.bubble-link::before {
+    content: '';
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -0.2rem;
+    right: -0.2rem;
+    border-radius: 5px;
+    background-color: currentColor;
+
+    opacity: 0.4;
+    transition: opacity 0.2s;
+}
+
+.bubble-link:hover,
+.bubble-link:focus-visible {
+    text-decoration-color: currentColor;
+}
+
+.bubble-link:hover::before,
+.bubble-link:focus-visible::before {
+    opacity: 0.5;
+}
+@media (prefers-color-scheme: dark) {
+    .bubble-link:hover::before,
+    .bubble-link:focus-visible::before {
+        opacity: 0.3;
+    }
+}

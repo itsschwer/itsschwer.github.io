@@ -76,35 +76,6 @@ main.index {
 
 /* Styling -------------------------- */
 
-.bubble {
-    position: relative;
-    text-decoration-color: transparent;
-    transition: text-decoration-color 0.15s;
-}
-.bubble::before {
-    content: '';
-    z-index: -1;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: -0.2rem;
-    right: -0.2rem;
-    border-radius: 5px;
-    background-color: currentColor;
-    opacity: 0.4;
-    transition: opacity 0.2s;
-}
-
-.bubble:hover,
-.bubble:focus-visible {
-    text-decoration-color: currentColor;
-}
-.bubble:hover::before,
-.bubble:focus-visible::before {
-    opacity: 0.3;
-}
-
-
 h1, h2 { margin-block: unset; }
 h1 { font-size: 2rem; font-weight: unset; }
 h2 { font-size: 1.5rem; }
