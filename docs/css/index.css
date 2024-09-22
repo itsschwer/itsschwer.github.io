@@ -77,8 +77,6 @@ main.index {
 /* Styling -------------------------- */
 
 h1, h2 { margin-block: unset; }
-h1 { font-size: 2rem; font-weight: unset; }
-h2 { font-size: 1.5rem; }
 
 ul {
     margin-block: unset;
