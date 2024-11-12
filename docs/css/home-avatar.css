@@ -1,17 +1,17 @@
-.nav-c {
-    z-index: 1;
+a.home-avatar {
     position: fixed;
-    margin: 0.5rem;
     top: 0;
     right: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    gap: 0.25rem;
+    z-index: 1;
+    margin: 0.5rem;
 }
 
-.nav-c > a > img,
-.nav-c > a > svg
+a.home-avatar img {
+    height: 4rem; /* Use height to avoid layout shifting (flex column) */
+}
+
+a.home-avatar > img,
+a.home-avatar > svg
     { display: block; }
 
 /* hover effect inspired by
@@ -20,27 +20,24 @@
  * "These Pesky Web Designers Have Done It Again..."
  * https://www.youtube.com/watch?v=GSPUUN4nDGE)
  */
-.nav-c a.home {
+a.home-avatar {
     --bg: #0D1117;
     --fill: black;
 
-    position: relative;
     border-radius: 50%;
     background-color: var(--bg);
 }
-.nav-c a.home * { pointer-events: none; }
-.nav-c a.home img {
-    height: 4rem; /* Use height to avoid layout shifting (flex column) */
-}
 
 @media (prefers-color-scheme: dark) {
-    .nav-c a.home:not(.only-light) {
+    a.home-avatar:not(.only-light) {
         --bg: unset;
         --fill: white;
     }
 }
 
-.nav-c a.home > svg {
+a.home-avatar * { pointer-events: none; }
+
+a.home-avatar > svg {
     position: absolute;
     z-index: -1;
 
@@ -48,19 +45,19 @@
     rotate: 90deg;
     transition: rotate 300ms ease-out
 }
-.nav-c a.home > svg text {
+a.home-avatar > svg text {
     font-family: 'Times New Roman', Times, serif;
     fill: var(--fill);
     opacity: 0;
     transition: opacity 200ms linear;
 }
 
-.nav-c a.home:hover         > svg,
-.nav-c a.home:focus-visible > svg {
+a.home-avatar:hover         > svg,
+a.home-avatar:focus-visible > svg {
     rotate: 0deg;
 }
-.nav-c a.home:hover         > svg text,
-.nav-c a.home:focus-visible > svg text {
+a.home-avatar:hover         > svg text,
+a.home-avatar:focus-visible > svg text {
     opacity: 1;
     transition-delay: 100ms;
 }
