@@ -44,6 +44,7 @@ main > section.hey { justify-self: center; }
 /* Styling ---------------------------------------------- */
 
 .hey > h1 {
+    margin-block-start: 0;
     margin-block-end: 0.5rem;
 }
 
