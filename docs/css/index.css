@@ -1,91 +1,70 @@
 body { margin: 0; }
 
-main.index {
+main {
     min-height: 100vh;
     min-height: 100svh; /* interacts better with mobile browser interface */
 
     font-family: monospace;
-
-    grid-template-columns:
-        1fr
-        [mid] fit-content(50%)
-        1fr;
-    grid-template-rows:
-        1fr
-        [mid] min-content
-        1fr;
 }
 
-.grid {
+
+/* Layout ----------------------------------------------- */
+
+.grid-2-col {
     display: grid;
-    justify-items: center;
-    align-items: center;
+    grid-template-columns: 2fr 1fr;
 }
 
-.grid-mid {
-    grid-column-start: mid;
-    grid-row-start: mid;
-}
-.grid-mid-sub {
-    grid-column-start: mid;
-    grid-row-start: -2;
-    align-self: flex-start;
+.flex-col {
+    display: flex;
+    flex-direction: column;
 }
 
-.grid-col {
-    width: 100%;
-    height: 100%;
-    grid-row: 1 / -1;
+main > h1 {
+    justify-self: center;
+    align-self: center;
 }
 
-.grid-right { grid-column-start: -2; }
-
-.align-inline-start {
-    justify-self: flex-start;
-    margin-inline: 20%;
+main > section {
+    align-self: center;
 }
-
 
 /* Mobile breakpoint */
 @media only screen and (max-width: 600px) {
-    .grid.collapsible {
-        min-height: unset;
-        margin-block-start: 4.6875rem;
+    .grid-2-col {
         display: flex;
         flex-direction: column;
-        align-items: flex-start;
     }
 
-    .collapsible .grid-mid {
-        margin-block: 1.25rem;
-        margin-inline: 4rem;
+    main {
+        margin-block-start: 4.5rem; /* home-avatar */
+        margin-inline: 1rem;
     }
 
-    .collapsible .grid-col {
-        width: unset;
-        margin-inline: 4rem;
-        margin-block: 2rem;
-        gap: 2rem;
-    }
-
-    .collapsible .align-inline-start {
-        margin-inline: unset;
+    main > * {
+        align-self: unset !important;
     }
 }
 
 
-/* Styling -------------------------- */
+/* Styling ---------------------------------------------- */
 
-h1, h2 { margin-block: unset; }
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    margin-block-end: 0.25rem;
+}
 
 ul {
     margin-block: unset;
     padding-inline-start: 30px;
 }
 
-
 /* Mobile breakpoint */
 @media only screen and (max-width: 600px) {
-    h2 { font-size: 1.25rem; }
-    ul { margin-block: 0.5rem; }
+    h1 {
+        font-size: 1.75rem;
+    }
 }

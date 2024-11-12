@@ -4,13 +4,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="color-scheme" content="dark light">
+    <meta name="color-scheme" content="only dark">
 
     <title>404 · itsschwer</title>
     <link rel="icon" type="image/png" href="https://avatars.githubusercontent.com/u/42115696?v=4">
 
     <link rel="stylesheet" href="/css/home-avatar.css">
-    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/css/fun/scanlines.css">
+
+    <style>
+        body { margin: 0; }
+
+        h1 { margin-block: unset; }
+
+        main {
+            min-height: 100vh;
+            min-height: 100svh; /* interacts better with mobile browser interface */
+
+            font-family: monospace;
+
+            grid-template-columns:
+                1fr
+                [mid] fit-content(50%)
+                1fr;
+            grid-template-rows:
+                1fr
+                [mid] min-content
+                1fr;
+        }
+
+        .grid {
+            display: grid;
+            justify-items: center;
+            align-items: center;
+        }
+
+        .grid-mid {
+            grid-column-start: mid;
+            grid-row-start: mid;
+        }
+
+        .grid-mid-sub {
+            grid-column-start: mid;
+            grid-row-start: -2;
+            align-self: flex-start;
+        }
+    </style>
 </head>
 <!--
     how did you get here?
@@ -26,7 +65,7 @@
         </svg>
     </a>
 
-    <main class="index grid">
+    <main class="grid scanlines">
         <h1 class="grid-mid">404!</h1>
         <em class="grid-mid-sub">go <a href="/">home</a>?</em>
     </main>
