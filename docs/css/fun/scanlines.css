@@ -1,6 +1,6 @@
 /* Derived from Mehdi's 'CSS Scanlines'
  * https://codepen.io/meduzen/pen/zxbwRV?editors=0100
- * Linked from https://dev.to/ekeijl/retro-crt-terminal-screen-in-css-js-4afh 
+ * Linked from https://dev.to/ekeijl/retro-crt-terminal-screen-in-css-js-4afh
  *   - https://codesandbox.io/p/sandbox/crt-terminal-in-css-js-tlijm
  *   - https://tlijm.csb.app/
  */
@@ -8,11 +8,11 @@
 .scanlines {
     --speed: 0.02;
     --size: 2px;
-    --color: #00000020;
+    --color: #00000040;
     --tint: transparent;
 }
-@media (prefers-color-scheme: dark) {
-    .scanlines { --color: #00000040; }
+@media (prefers-color-scheme: light) {
+    .scanlines::after { background: none !important; }
 }
 
 .scanlines::after {
