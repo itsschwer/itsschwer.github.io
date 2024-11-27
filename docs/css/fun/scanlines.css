@@ -12,7 +12,7 @@
     --tint: transparent;
 }
 @media (prefers-color-scheme: light) {
-    .scanlines::after { background: none !important; }
+    body:not(.only-dark) .scanlines::after { background: none !important; }
 }
 
 .scanlines::after {

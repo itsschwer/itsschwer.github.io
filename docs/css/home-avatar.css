@@ -21,16 +21,15 @@ a.home-avatar > svg
  * https://www.youtube.com/watch?v=GSPUUN4nDGE)
  */
 a.home-avatar {
-    --bg: #0D1117;
     --fill: black;
 
     border-radius: 50%;
-    background-color: var(--bg);
+    background-color: #090926;
 }
 
+body.only-dark a.home-avatar { --fill: white; }
 @media (prefers-color-scheme: dark) {
-    a.home-avatar:not(.only-light) {
-        --bg: unset;
+    body:not(.only-light) a.home-avatar {
         --fill: white;
     }
 }
