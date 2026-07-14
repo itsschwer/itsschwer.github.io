@@ -1,3 +1,7 @@
 [submodule "docs/calendar"]
 	path = docs/calendar
 	url = https://github.com/itsschwer/printable-calendar
+
+[submodule "docs/beat-saber-playlist-maker"]
+	path = docs/beat-saber-playlist-maker
+	url = https://github.com/itsschwer/beat-saber-playlist-maker
